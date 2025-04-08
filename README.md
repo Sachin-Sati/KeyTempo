@@ -18,7 +18,7 @@ KeyTempo is an interactive web application that tracks your typing speed and adj
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/KeyTempo.git
+git clone https://github.com/Sachin-Sati/KeyTempo.git
 ```
 
 2. Install dependencies

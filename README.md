@@ -48,7 +48,3 @@ This project uses Vite for fast development with HMR (Hot Module Replacement) su
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
-
-## License
-
-MIT

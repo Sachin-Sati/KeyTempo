@@ -37,7 +37,8 @@ function TypingForm() {
                 className="form-control form-control-lg mb-3"
                 placeholder="Start Typing..."
                 value={text}
-                onChange={handleTyping}></textarea>
+                onChange={handleTyping}>
+                </textarea>
                 <div className="d-flex flex-column gap-1 rounded shadow-sm mb-3 bg-light-subtle p-3">
                   <p><strong>Typing Speed:</strong> {typingSpeed} kps</p>
                   <p><strong>Playback Speed:</strong> {playbackSpeed} x</p>

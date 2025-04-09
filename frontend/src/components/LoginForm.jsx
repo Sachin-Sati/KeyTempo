@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username:'',
         password:'',
@@ -19,9 +21,7 @@ const LoginForm = () => {
             const data = await res.json();
             if(res.ok) {
                 alert(data.message);
-                console.log("Status:", res.status);
-                console.log("Message:", data.message);
-                console.log("User:", data.user);
+                navigate('/home');
             } else {
                 alert(data.message);
             }            

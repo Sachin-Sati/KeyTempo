@@ -4,7 +4,7 @@ const registerUser = async (req, res) => {
     const {username, email, password} = req.body;
     const newUser = new User({username, email, password});
     await newUser.save();
-    res.send(newUser);
+    res.status(200).json({ message: "User registered successfully" });
 }
 
 const loginUser = async (req, res) => {

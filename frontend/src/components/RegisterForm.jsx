@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username:'',
         email:'',
@@ -17,10 +19,11 @@ const RegisterForm = () => {
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(formData),
             });
-            const data = res.json();
+            const data = await res.json();
             console.log(data);
             if(res.ok) {
                 alert("User Registered Successfully!");
+                navigate('/login');
             } else {
                 alert(`Status: ${res.status}`);
             }           

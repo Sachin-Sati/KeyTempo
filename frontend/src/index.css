@@ -13,29 +13,33 @@ footer {
   background-color: #0a0a23;
 }
 
-.custom-card {
-  width: 90vw; 
-  max-width: 600px;
-  height: 70vh;
-  max-height: 90vh; 
-  margin: auto; 
-  padding: 2rem; 
-  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.3);
-  background-color: #003566;
-  border-radius: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .card-container {
   flex: 1;
   width: 100%;
-  height: 100%;
+  min-height: calc(100vh - 112px); /* subtract navbar + footer height */
   background-color: #003566;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0;
+}
+
+.custom-card {
+  width: 90vw; 
+  max-width: 600px;
+  height: auto;
+  margin: 0;
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.3);
+  background-color: #003566;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 html, body, #root {

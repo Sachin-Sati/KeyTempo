@@ -30,27 +30,36 @@ const LoginForm = () => {
         }
     }
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username:</label>
-            <input 
-            type="text" 
-            id="username"
-            name="username"
-            value={formData.username}
-            placeholder="john"
-            onChange={handleChange}
-            />
-            <label htmlFor="password">Password:</label>
-            <input 
-            type="text" 
-            id="password"
-            name="password"
-            value={formData.password}
-            placeholder="john123" 
-            onChange={handleChange}
-            />
-            <button>Submit</button>
-        </form>
+        <div className="card-container">
+          <div className="card shadow p-4 custom-card">
+          <div className="card-body">
+                    <h5 class="card-title mb-3">Login</h5>
+                    <form onSubmit={handleSubmit}>
+                        <label className="form-label" htmlFor="username">Username:</label>
+                        <input 
+                        className="form-control"
+                        type="text" 
+                        id="username"
+                        name="username"
+                        value={formData.username}
+                        placeholder="john"
+                        onChange={handleChange}
+                        />
+                        <label className="form-label mt-3" htmlFor="password">Password:</label>
+                        <input 
+                        className="form-control"
+                        type="text" 
+                        id="password"
+                        name="password"
+                        value={formData.password}
+                        placeholder="john123" 
+                        onChange={handleChange}
+                        />
+                        <button className="btn btn-success mt-3">Submit</button>
+                    </form>         
+                </div>    
+          </div>
+        </div>
     )
 }
 

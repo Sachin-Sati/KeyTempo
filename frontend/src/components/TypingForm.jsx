@@ -30,8 +30,8 @@ function TypingForm() {
     }, []);
     return (
         <>
-        <div className="container-fluid d-flex justify-content-center align-items-center bg-light h-100">
-            <div className="card shadow p-4 bg-success-subtle text-success-emphasis w-50 h-50" style={{maxWidth:'800px'}}>
+        <div className="card-container">
+            <div className="card shadow p-4 custom-card" >
               <form>
                 <textarea 
                 className="form-control form-control-lg mb-3"
@@ -43,8 +43,10 @@ function TypingForm() {
                   <p><strong>Typing Speed:</strong> {typingSpeed} kps</p>
                   <p><strong>Playback Speed:</strong> {playbackSpeed} x</p>
                 </div>
-                <button className="btn btn-outline-success mx-2" type="button" onClick={() => AudioPlayer.play()}>Play</button>
-                <button className="btn btn-outline-danger mx-2" type="button" onClick={() => AudioPlayer.pause()}>Pause</button>
+                <div className="d-flex justify-content-center">
+                  <button className="btn btn-outline-success mx-2" type="button" onClick={() => AudioPlayer.play()}>Play</button>
+                  <button className="btn btn-outline-danger mx-2" type="button" onClick={() => AudioPlayer.pause()}>Pause</button>
+                </div>
               </form>
             </div>
         </div>

@@ -30,39 +30,49 @@ const RegisterForm = () => {
 
     }
     return (
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username:</label>
-            <input 
-            type="text" 
-            id="username"
-            name="username" 
-            placeholder="John"
-            value={formData.username}
-            onChange={handleChange}
-            />
-            <br />
-            <label htmlFor="email">Email: </label>
-            <input 
-            type="text" 
-            id="email"
-            name="email" 
-            placeholder="johndoe@example.com"
-            value={formData.email}
-            onChange={handleChange}
-            />
-            <br />
-            <label htmlFor="password">Password:</label>
-            <input 
-            type="text" 
-            id="password"
-            name="password" 
-            value={formData.password}
-            placeholder="john123"
-            onChange={handleChange}
-            />
-            <br />
-            <button>Submit</button>
-        </form>
+        <div className="card-container">
+            <div className="card shadow p-4 custom-card">
+            <div className="card-body">
+                    <h5 className="card-title mb-3">Register</h5>
+                    <form onSubmit={handleSubmit}>
+                        <label className="form-label" htmlFor="username">Username:</label>
+                        <input
+                        className="form-control" 
+                        type="text" 
+                        id="username"
+                        name="username" 
+                        placeholder="John"
+                        value={formData.username}
+                        onChange={handleChange}
+                        />
+                        <br />
+                        <label className="form-label" htmlFor="email">Email: </label>
+                        <input
+                        className="form-control" 
+                        type="text" 
+                        id="email"
+                        name="email" 
+                        placeholder="johndoe@example.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        />
+                        <br />
+                        <label className="form-label" htmlFor="password">Password:</label>
+                        <input 
+                        className="form-control"
+                        type="text" 
+                        id="password"
+                        name="password" 
+                        value={formData.password}
+                        placeholder="john123"
+                        onChange={handleChange}
+                        />
+                        <br />
+                        <button className="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     )
 }
 

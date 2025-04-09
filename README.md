@@ -18,7 +18,7 @@ KeyTempo is an interactive web application that tracks your typing speed and adj
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/KeyTempo.git
+git clone https://github.com/Sachin-Sati/KeyTempo.git
 ```
 
 2. Install dependencies
@@ -48,7 +48,3 @@ This project uses Vite for fast development with HMR (Hot Module Replacement) su
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
-
-## License
-
-MIT

@@ -15,7 +15,7 @@ const LoginForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('http://localhost:5000/login', {
+            const res = await fetch('http://localhost:5000/api/login', {
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(formData),
@@ -51,7 +51,7 @@ const LoginForm = () => {
                         <label className="form-label mt-3" htmlFor="password">Password:</label>
                         <input 
                         className="form-control"
-                        type="text" 
+                        type="password" 
                         id="password"
                         name="password"
                         value={formData.password}

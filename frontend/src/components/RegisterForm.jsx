@@ -14,7 +14,7 @@ const RegisterForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch('http://localhost:5000/register', {
+            const res = await fetch('http://localhost:5000/api/register', {
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(formData),
@@ -52,7 +52,7 @@ const RegisterForm = () => {
                         <label className="form-label" htmlFor="email">Email: </label>
                         <input
                         className="form-control" 
-                        type="text" 
+                        type="email" 
                         id="email"
                         name="email" 
                         placeholder="johndoe@example.com"
@@ -63,7 +63,7 @@ const RegisterForm = () => {
                         <label className="form-label" htmlFor="password">Password:</label>
                         <input 
                         className="form-control"
-                        type="text" 
+                        type="password" 
                         id="password"
                         name="password" 
                         value={formData.password}

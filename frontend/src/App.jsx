@@ -10,17 +10,17 @@ import { AuthProvider } from './utils/AuthContext';
 function App() {
   return (
     <>
-    <AuthProvider>
-      <Navbar />
-      <Router>
-        <Routes>
-          <Route path='/' element={<TypingForm />} />
-          <Route path='/register' element={<RegisterForm/>} />
-          <Route path='/login' element={<LoginForm/>} />
-        </Routes>
-      </Router>
-      <Footer />
-    </AuthProvider>
+    <Router>
+      <AuthProvider>
+        <Navbar />
+          <Routes>
+            <Route path='/' element={<TypingForm />} />
+            <Route path='/register' element={<RegisterForm/>} />
+            <Route path='/login' element={<LoginForm/>} />
+          </Routes>
+        <Footer />
+      </AuthProvider>
+    </Router>
     </>
   )
 }

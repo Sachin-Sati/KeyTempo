@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import AudioPlayer from "../utils/AudioPlayer";
+import { AuthContext } from "../utils/AuthContext";
 
 function TypingForm() {
     const [text, setText] = useState("");

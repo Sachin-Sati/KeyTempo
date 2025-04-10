@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../utils/AuthContext";
 
 const LoginForm = () => {
+    const {login} = useContext(AuthContext)
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
         username:'',
@@ -20,8 +22,9 @@ const LoginForm = () => {
             })
             const data = await res.json();
             if(res.ok) {
+                login(data.token);
                 alert(data.message);
-                navigate('/home');
+                navigate('/');
             } else {
                 alert(data.message);
             }            
